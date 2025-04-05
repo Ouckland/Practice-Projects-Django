@@ -7,21 +7,20 @@ Welcome to my portfolio repository! This space contains various projects showcas
 ## 📂 Folder Structure
 ```bash
 Portfolio-Projects/
-│── web_scraping_projects/  # Web scraping-specific projects
-│   ├── job_scraper/
-│   ├── price_tracker/
-│   ├── news_aggregator/
+|__Python
+│   ── web_scraping/  # Web scraping-specific projects
+│      ├── job_scraper/
+│      ├── price_tracker/
+│      ├── news_aggregator/
 │
-│── python_projects/  # General Python projects
-│   ├── task_automation/
-│   ├── stock_analysis/
-│   ├── chatbot/
+│   ── python_projects/  # General Python projects
+│      ├── task_automation/
+│      ├── stock_analysis/
+│      ├── chatbot/
 │
-│── README.md  # This file
+│── README.md  # This file  
 
 
 🛠 Tech Stack
 Programming Language: Python 🐍
 Web Scraping: BeautifulSoup, Selenium
-Data Processing: Pandas, NumPy
-Data Visualization: Matplotlib, Seaborn
