@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+</head>
+<body>
+{% include "partials/header.html" %}
+<div>
+    <h1>Music Engine</h1>
+    <p>Welcome to Music Engine, a futuristic web app where you can simulate music creation and experience it at the same time</p>
+    <a href="{% url 'music_engine:display_artists' %}"><button class="view-button">View artists</button></a>
+    <a href="{% url 'music_engine:add_artist' %}"><button class="add-artist-button">Add Artist</button></a>
+</div>
+    
+</body>
+</html>

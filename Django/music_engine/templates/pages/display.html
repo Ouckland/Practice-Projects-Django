@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/display-artist.css' %}">
+</head>
+<body>
+    {% include "partials/header.html" %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert-{{ message.tags}}">
+            {{ message }}
+            </div>
+        {% endfor %}    
+    {% endif %}
+    
+    <div class='artist-container'>
+        {% for artist in artists  %}
+            <div class='artist'>
+                <p>Name-{{ artist.name }}</p><hr>
+                <span>Debut Year-{{ artist.debut_year }}</span><hr>
+                <span>Gender-{{ artist.gender }}</span><hr>
+                <span>Age-{{ artist.age }}</span><hr>
+                <span>Artist Genre-{{ artist.genre }}</span>
+                <div>
+                    <button><a href="{% url 'music_engine:delete_artist' artist.id %}">Delete Artist</a></button>
+                    <button><a href="{% url 'music_engine:update_artist' artist.id %}">Update Artist</a></button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

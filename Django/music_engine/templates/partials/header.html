@@ -1,0 +1,12 @@
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+{% endblock head %}
+{% block content %}
+    <nav class="nav-bar">
+        <a href="{% url 'music_engine:home' %}"class='nav-link'><span>Home</span></a>
+        <a href="{% url 'music_engine:add_artist' %}"class='nav-link'><span>Add Artist</span></a>
+        <a href="{% url 'music_engine:display_artists' %}" class='nav-link'><span>View Artists</span></a>
+    </nav>
+<script src="{% static 'js/nav-script.js' %}"></script>
+{% endblock content %}
